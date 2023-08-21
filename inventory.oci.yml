@@ -4,6 +4,10 @@ plugin: oracle.oci.oci
 regions:
   - sa-saopaulo-1
 
+compartments:
+- compartment_ocid: "ocid1.compartment.oc1..aaaaaaaatsmhysmjpiaahcmocsgf7vr2mfi2xgg5jh624qrl4dbkn6dxdo5q"   # prod
+  fetch_hosts_from_subcompartments: true
+
 # Fetch all hosts
 # fetch_db_hosts: true
 
@@ -17,12 +21,9 @@ hostname_format_preferences:
   - "private_ip"
   - "id"
 
-compartments:
-- compartment_ocid: "ocid1.compartment.oc1..aaaaaaaatsmhysmjpiaahcmocsgf7vr2mfi2xgg5jh624qrl4dbkn6dxdo5q"   # prod
-  fetch_hosts_from_subcompartments: true
  
 # Enable threads to speedup lookup
-enable_parallel_processing: yes
+# enable_parallel_processing: yes
  
 # # Enable Cache
 # cache: yes
